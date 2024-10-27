@@ -1,3 +1,5 @@
+package com.example.swe_gui;
+
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
@@ -24,6 +26,7 @@ public class Diagram extends Application {
         Label inputFilePathLabel = new Label("Input File Path:");
         TextField inputFilePathField = new TextField();
         inputFilePathField.setPromptText("Enter file path");
+        inputFilePathField.setPrefWidth(300);
         Button browseInputButton = new Button("Browse");
 
         // Action for input file browse button
@@ -39,6 +42,7 @@ public class Diagram extends Application {
         Label previousProjectLabel = new Label("Previous Project:");
         TextField previousProjectField = new TextField();
         previousProjectField.setPromptText("Select old project");
+        previousProjectField.setPrefWidth(250);
         Button browsePreviousButton = new Button("Browse");
 
         // Action for previous project browse button
@@ -53,7 +57,7 @@ public class Diagram extends Application {
         // Select Project Type
         Label projectTypeLabel = new Label("Select Project Type:");
         ComboBox<String> projectTypeComboBox = new ComboBox<>();
-        projectTypeComboBox.getItems().addAll("New Project", "Existing Project");
+        projectTypeComboBox.getItems().addAll("New Project", "Old Project");
         projectTypeComboBox.setValue("New Project");
 
         // View Output As
@@ -91,7 +95,7 @@ public class Diagram extends Application {
         grid.add(proceedButton, 1, 4);
 
         // Create Scene and show stage
-        Scene scene = new Scene(grid, 400, 250);
+        Scene scene = new Scene(grid, 530, 210);
         primaryStage.setScene(scene);
         primaryStage.show();
     }
