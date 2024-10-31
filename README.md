@@ -12,7 +12,8 @@ The Data Flow Generator is a software tool designed to help programmers analyze 
 1.1 Analyze code for the input data.
 1.2 Track all occurrences of input data being call, set, or output of the code.
 1.3 Display flow of inputted data.
-2. Secondary functions of D.F.G.
+
+**2. Secondary functions of D.F.G**
 2.1 Stored previous project that the user may have run through the D.F.G.
 2.2 Load and review previous data flow analysis.
 2.3 The system will let users view data flow results as either a text report or a chart.
