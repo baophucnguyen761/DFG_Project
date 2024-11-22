@@ -2,7 +2,7 @@
 **Data Flow Generator Project** - Language Java
 -----------------------------------------------------------------
 **Needs Statement**
-##**Purpose**
+- **Purpose**
 This document provides the functional need statements for the Data Flow Generator project. The Data Flow Generator system must allow users to automatically generate data flow diagrams (DFDs) from source code written in Java. The primary goal of this project is to generate visual representations of data flow in Java applications, which will aid developers in understanding the movement of data between various components of a codebase. The system will track inputs, outputs, and data transformations, providing critical insights for refactoring and optimizing code.
 
 **The Data Flow Generator Functional Need Statement**
