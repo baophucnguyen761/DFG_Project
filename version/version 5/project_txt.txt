@@ -1,0 +1,83 @@
+Variable made tempScore|8|variable made
+---------------new line found0---------------
+tempScore|15|tempScore = scanner.nextInt();
+---------------new line found1---------------
+tempScore|15|tempScore = scanner.nextInt();
+---------------new line found2---------------
+tempScore|17|if (tempScore == -1) {
+    break;
+}
+---------------new line found3---------------
+tempScore|21|if (tempScore >= 0 && tempScore <= 100) {
+    scores.add(tempScore);
+    System.out.println("Score " + tempScore + " added!");
+} else {
+    System.out.println("Invalid score. Please enter a number between 0 and 100.");
+}
+---------------new line found4---------------
+tempScore|21|if (tempScore >= 0 && tempScore <= 100) {
+    scores.add(tempScore);
+    System.out.println("Score " + tempScore + " added!");
+} else {
+    System.out.println("Invalid score. Please enter a number between 0 and 100.");
+}
+---------------new line found5---------------
+tempScore|22|scores.add(tempScore);
+---------------new line found6---------------
+tempScore|23|System.out.println("Score " + tempScore + " added!");
+---------------new line found7---------------
+tempScore|37|// Assign to temp variable for tracking
+tempScore = score;
+---------------new line found8---------------
+tempScore|37|// Assign to temp variable for tracking
+tempScore = score;
+---------------new line found9---------------
+tempScore|38|total += tempScore;
+---------------new line found10---------------
+tempScore|44|// Find the highest score
+tempScore = scores.get(0);
+---------------new line found11---------------
+tempScore|44|// Find the highest score
+tempScore = scores.get(0);
+---------------new line found12---------------
+tempScore|46|if (score > tempScore) {
+    // Update temp variable
+    tempScore = score;
+}
+---------------new line found13---------------
+tempScore|47|// Update temp variable
+tempScore = score;
+---------------new line found14---------------
+tempScore|47|// Update temp variable
+tempScore = score;
+---------------new line found15---------------
+tempScore|50|System.out.println("The highest score is: " + tempScore);
+---------------new line found16---------------
+tempScore|56|// Assign to temp variable for use
+tempScore = score;
+---------------new line found17---------------
+tempScore|56|// Assign to temp variable for use
+tempScore = score;
+---------------new line found18---------------
+tempScore|57|System.out.println(tempScore);
+---------------new line found19---------------
+tempScore|64|// Use temp variable for classification
+tempScore = score;
+---------------new line found20---------------
+tempScore|64|// Use temp variable for classification
+tempScore = score;
+---------------new line found21---------------
+tempScore|65|if (tempScore >= 90) {
+    above90++;
+} else if (tempScore >= 70) {
+    between70And89++;
+} else {
+    below70++;
+}
+---------------new line found22---------------
+tempScore|67|if (tempScore >= 70) {
+    between70And89++;
+} else {
+    below70++;
+}
+---------------new line found23---------------

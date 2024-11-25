@@ -1,0 +1,35 @@
+digraph G {
+node [ oval="rectangle"
+       color="deepskyblue4"
+       style="filled"]
+VAnode1 [ label="8," ];
+AEnode1 [ label="15," ];
+S1node1 [ label="15," ];
+NEnode1 [ label="17," ];
+S2node1 [ label="21," ];
+S2node2 [ label="21," ];
+NEnode2 [ label="22," ];
+S2node3 [ label="23," ];
+AEnode2 [ label="37," ];
+NEnode3 [ label="37," ];
+NEnode4 [ label="38," ];
+AEnode3 [ label="44," ];
+NEnode5 [ label="44," ];
+NEnode6 [ label="46," ];
+AEnode4 [ label="47," ];
+NEnode7 [ label="47," ];
+S2node4 [ label="50," ];
+AEnode5 [ label="56," ];
+NEnode8 [ label="56," ];
+S2node5 [ label="57," ];
+AEnode6 [ label="64," ];
+NEnode9 [ label="64," ];
+NEnode10 [ label="65," ];
+NEnode11 [ label="67," ];
+S1node1->VAnode1
+VAnode1->S2node1
+VAnode1->S2node2
+VAnode1->S2node3
+VAnode1->S2node4
+VAnode1->S2node5
+}
