@@ -29,6 +29,11 @@ public class ProjectProcessor {
             CompilationUnit com = StaticJavaParser.parse(path);
             VarVisitor visitor = new VarVisitor(inputCodeString);
             visitor.visit(com, null);
+
+            if (!visitor.isVariableFound()){
+                fileService.showAlert("Error", "Variable '" + inputCodeString + "' not found in the Java file.");
+                return;
+            }
             visitor.writeToDot(101);
 
             String content;
