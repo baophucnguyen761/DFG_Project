@@ -33,7 +33,7 @@ It supports both new and existing projects, allowing users to process and visual
    - **Graphviz**: This project uses Graphviz for generating flowchart images. Ensure Graphviz is installed and available in your system's PATH.  
    - You can download it from [Graphviz GitHub](https://github.com/nidi3/graphviz-java).
    - **Java Development Kit (JDK)**: Ensure you have JDK 8 or later installed.
-   - You can download it from [Javafx websit](https://openjfx.io/openjfx-docs/#install-java).
+   - You can download it from [Javafx website](https://openjfx.io/openjfx-docs/#install-java).
 
 3. **Run the Application**  
    You can run the application by executing the `Diagram.java` file.
@@ -83,7 +83,7 @@ When selecting **Flow Chart** as the output type:
 - **Java Files (`*.java`)**: Input files containing the Java code to be analyzed.
 - **Text Files (`*.txt`)**: Contain the raw data flow information, which can be viewed directly in the application.
 - **Graphviz DOT Files (`*.dot`)**: Define the flowchart structure, which can be rendered as an image.
-- **Image Files (`*.png`, `*.jpg`)**: Flowchart images generated from `.dot` files.
+- **Image Files (`*.png`)**: Flowchart images generated from `.dot` files.
 
 ---
 
