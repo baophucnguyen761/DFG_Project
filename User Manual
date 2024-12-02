@@ -1,0 +1,110 @@
+# Data Flow Generator - User Manual
+
+## Overview
+
+**Data Flow Generator** is a JavaFX-based application designed to assist developers in visualizing and analyzing data flow in their Java code. The application can generate and display flowcharts and text-based representations of variable data flows. It supports new and existing projects, allowing users to process and visualize their code with ease.
+
+---
+
+## Features
+
+1. **Create a New Project:**
+   - Users can create a new project by selecting the input Java file and specifying a variable name to track.
+   
+2. **Open an Existing Project:**
+   - Allows users to open an existing project by selecting a previous project folder and viewing its related data flow files.
+   
+3. **View Output in Different Formats:**
+   - Outputs can be viewed in either **Text** format (as raw data flow information) or **Flow Chart** format (as a graphical representation of data flows).
+
+4. **Generate and Visualize Flowcharts:**
+   - Flowcharts are generated from `.dot` files and rendered into PNG images for easy viewing.
+
+---
+
+## Installation
+
+1. **Clone or Download the Project:**
+   - Clone the repository or download the source code from [GitHub repository link].
+   
+2. **Install Dependencies:**
+   - This project uses **Graphviz** for generating flowchart images. Ensure Graphviz is installed and available in your system's PATH.
+   - You will also need to have Java Development Kit (JDK) 8 or later installed to run the application.
+
+3. **Run the Application:**
+   - You can run the application by executing the `Diagram.java` file.
+
+---
+
+## How to Use
+
+### 1. Launch the Application
+
+Run the application by executing the `Diagram` class. This will launch a window with the following components:
+
+- **Input File Path:** A text field where you can specify the path to your Java source file.
+- **Previous Project:** A text field to select an existing project if you're working with an older project. 
+- **Project Type:** A dropdown where you can select whether you're creating a **New Project** or working with an **Old Project**.
+- **View Output As:** A dropdown where you can choose between viewing the output as **Text** or as a **Flow Chart**.
+
+### 2. Select Project Type
+
+- **New Project:**
+   - If you're starting a new project, provide the path to the Java file you want to analyze.
+   - Enter the variable name you wish to track (e.g., `data`).
+   
+- **Old Project:**
+   - If you're working with an existing project, click the "Browse" button next to the "Previous Project" field.
+   - Select the folder containing the project files.
+   
+### 3. Proceed with Project Processing
+
+Once you've set up the input fields, click the **Proceed** button.
+
+- If you're creating a new project, the application will process the selected Java file and generate an output in the specified format (Text or Flow Chart).
+- If you're using an old project, the application will process the previous project folder and generate the relevant output.
+
+---
+
+## Working with Flowcharts
+
+If you choose **Flow Chart** as the output type:
+
+1. **View Flowchart:**
+   - The application will read and process the `.dot` file associated with the project and render it into a PNG image.
+   - The generated flowchart will be displayed in a new window, allowing you to analyze the data flow visually.
+
+---
+
+## Supported File Formats
+
+- **Java Files (`*.java`):** Used for the initial code input.
+- **Text Files (`*.txt`):** Contain textual representations of the data flow, which can be viewed directly in the application.
+- **Graphviz DOT Files (`*.dot`):** Represent the flowchart definition, which can be visualized as an image.
+- **Image Files (`*.png`, `*.jpg`):** Displayed as flowcharts when generated from a `.dot` file.
+
+---
+
+## Error Handling
+
+- If you enter an invalid file path or project details, the application will display an error message.
+- If a selected `.dot` file fails to render, the application will attempt to show a relevant error message.
+
+---
+## FAQ
+
+**Q1: How do I open an old project?**
+- Click the "Browse" button next to the "Previous Project" field, and select the folder containing your old project files.
+
+**Q2: Can I edit the flowchart?**
+- The flowchart is generated as an image (PNG) and cannot be edited directly. You can view and analyze it, but any modifications to the data flow would require updating the underlying code and regenerating the flowchart.
+
+**Q3: How can I ensure Graphviz is installed?**
+- Ensure that the Graphviz executable is in your system's PATH. You can download it from the [Graphviz website](https://graphviz.gitlab.io/download/).
+
+---
+
+## Conclusion
+
+The **Data Flow Generator** application is a powerful tool for visualizing data flow in Java projects. Whether you are creating a new project or analyzing an existing one, this tool simplifies the process of generating flowcharts and textual data flow representations.
+
