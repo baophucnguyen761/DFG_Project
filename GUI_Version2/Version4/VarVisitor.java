@@ -1,6 +1,3 @@
-package com.example.test122;
-
-
 import com.github.javaparser.ast.body.VariableDeclarator;
 import com.github.javaparser.ast.expr.AssignExpr;
 import com.github.javaparser.ast.expr.Expression;
@@ -19,6 +16,7 @@ import java.util.stream.Stream;
 
 public class VarVisitor extends VoidVisitorAdapter<Void> {
     private final String variableName;
+    private boolean variableFound = false;
     List<String> NE = new ArrayList<>();
     List<String> VA = new ArrayList<>();
     List<String> AE = new ArrayList<>();
@@ -43,27 +41,37 @@ public class VarVisitor extends VoidVisitorAdapter<Void> {
         AE.add("blank");
         SS1.add("blank");
         SS2.add("blank");
-        MakeFile();
     }
 
     @Override
-// Example: int x = 14
     public void visit(VariableDeclarator tempData, Void arg) {
-        int ID_code = 0;
-        boolean booleanCheck = false;
-        final String[] Stringsale = {""}; // Initialize the Stringsale array
+        int ID_code = 0; // Code identifier for the variable
+        final String[] variableDetails = {""}; // Array to hold variable details (for immutability)
+
+        // Check if the variable name matches the target variable
         if (tempData.getNameAsString().equals(variableName)) {
-            // Save to list and file
-            Stringsale[0] = (tempData.getName().toString() + "|" + tempData.getRange().map(r -> r.begin.line).orElse(-1) + "|variable made");
-            writeToTxt("Variable made " + Stringsale[0]);
-            VA.add(Stringsale[0]);
-            booleanCheck = true;
-            if (booleanCheck == true) {
-                VDint = VDint + 1;
-                writeToDot(ID_code);
-                super.visit(tempData, arg);
+            // Record variable details (name and line number)
+            variableDetails[0] = tempData.getName() + "|" +
+                    tempData.getRange().map(r -> r.begin.line).orElse(-1) + "|variable made";
+            // Ensure the folder and files are created (only once)
+            if (!variableFound) {
+                variableFound = true;
+                MakeFile(); // Create necessary files/folder
             }
+            // Save details to file and list
+            writeToTxt("Variable made: " + variableDetails[0]);
+            VA.add(variableDetails[0]);
+            // Update counts and write to DOT file
+            VDint++;
+            writeToDot(ID_code);
+            // Call the parent method for further processing
+            super.visit(tempData, arg);
         }
+    }
+
+
+    public boolean isVariableFound(){
+        return variableFound;
     }
 
     @Override
@@ -260,7 +268,6 @@ public class VarVisitor extends VoidVisitorAdapter<Void> {
             throw new RuntimeException("Error writing connections to DOT file: " + e.getMessage());
         }
     }
-//still working on. 11/18/2024
 
     public Path getTxtPath() {
         return pathTxt.toAbsolutePath();
