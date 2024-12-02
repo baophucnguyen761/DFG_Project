@@ -323,45 +323,4 @@ public class VarVisitor extends VoidVisitorAdapter<Void> {
             System.out.println("File not found: " + file.getAbsolutePath());
         }
     }
-
-/*
-  if (allNode.isEmpty()) {
-            deleteFile(pathDot);
-            deleteFile(pathTxt);
-            deleteFile(Folderpath);
-            return false;
-        }
-        return true;
-    private void deleteFile(Path path) {
-        File file = path.toFile();
-        if (file.exists()) {
-            boolean deleted = file.delete();
-            if (deleted) {
-                System.out.println(file.getAbsolutePath() + " deleted successfully.");
-            } else {
-                System.out.println("Failed to delete: " + file.getAbsolutePath());
-            }
-        } else {
-            System.out.println("File not found: " + file.getAbsolutePath());
-        }
-    }
-*/
-/*
-*  try {
-*  command = "del /f " + filePath;
-            // Create a new process and execute the command
-            ProcessBuilder processBuilder = new ProcessBuilder(command.split(" "));
-            processBuilder.inheritIO();  // This will show the terminal output in your console
-            Process process = processBuilder.start();
-            int exitCode = process.waitFor();  // Wait for the process to finish
-
-            if (exitCode == 0) {
-                System.out.println("File deleted successfully.");
-            } else {
-                System.out.println("Error occurred while deleting the file.");
-            }
-        } catch (IOException | InterruptedException e) {
-            e.printStackTrace();
-        }
-    }*/
 }
