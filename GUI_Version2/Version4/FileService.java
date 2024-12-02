@@ -1,5 +1,3 @@
-package com.example.test122;
-
 import javafx.scene.control.Alert;
 import java.io.*;
 import java.util.ArrayList;
